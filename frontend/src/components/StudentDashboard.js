@@ -40,6 +40,7 @@ function StudentDashboard({ userData, goHome }) {
     return () => {
       socket.off('new_request');
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData.email]);
 
   const fetchMeetings = async () => {

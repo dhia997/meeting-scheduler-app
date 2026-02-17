@@ -35,6 +35,7 @@ function RecruiterDashboard({ userData, goHome }) {
     return () => {
       socket.off('request_responded');
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchMeetings = async () => {
