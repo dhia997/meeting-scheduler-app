@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: meeting-backend-scheduler
+    runtime: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://dhia:dhia123@cluster0.m8iegv8.mongodb.net/meeting_app?retryWrites=true&w=majority
+      - key: PORT
+        value: 5001
