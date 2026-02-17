@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Home Page */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 3rem;
+}
+
+.role-selection {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.role-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.role-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.role-card h2 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.role-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.role-card input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.role-card input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.role-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.role-card button:hover {
+  opacity: 0.9;
+}
+
+/* Dashboard Common */
+.dashboard {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info h1 {
+  color: #667eea;
+  font-size: 1.8rem;
+}
+
+.user-info p {
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+.home-btn {
+  padding: 10px 20px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.home-btn:hover {
+  opacity: 0.9;
+}
+
+/* Recruiter Dashboard */
+.meeting-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.meeting-form h2 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* Meetings List */
+.meetings-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.meetings-section h2 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.meeting-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-left: 5px solid #667eea;
+  transition: transform 0.2s;
+}
+
+.meeting-card:hover {
+  transform: translateX(5px);
+}
+
+.meeting-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.meeting-info {
+  color: #666;
+  margin: 0.3rem 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-accepted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-declined {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.meeting-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.accept-btn, .decline-btn, .join-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.accept-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.decline-btn {
+  background: #f44336;
+  color: white;
+}
+
+.join-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.accept-btn:hover, .decline-btn:hover, .join-btn:hover {
+  opacity: 0.9;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-left: 5px solid #4caf50;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification h3 {
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+}
+
+.notification p {
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  
+  .role-card {
+    width: 100%;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .meeting-form, .meetings-section {
+    padding: 1rem;
+  }
+}
