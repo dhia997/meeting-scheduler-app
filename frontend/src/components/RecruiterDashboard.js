@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import axios from 'axios';
 
-// IMPORTANT: Replace this with your Render backend URL
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+// Backend API URL - Hardcoded for deployment
+const API_URL = 'https://meeting-scheduler-app-1.onrender.com';
 const socket = io(API_URL);
 
 function RecruiterDashboard({ userData, goHome }) {
